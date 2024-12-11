@@ -2,13 +2,13 @@
 :root{
     /* App Colors */
     /* 주요 색상 */
-    --color-primary: var(--color-black)
+    --color-primary: var(--color-black);
     --color-primary-variant: var(--color-gray);
     /* 강조 색상 */
-    --color-accent: var(--color-blue)
+    --color-accent: var(--color-blue);
     --color-accent-variant: var(--color-orange);
     /* 텍스트 색상 */
-    --color-text: var(--color-white)
+    --color-text: var(--color-white);
     /* 밑의 컬러 변수만 사용 했을 때 만약 블루 칼라를 노란색으로 밖우고 싶을때 이름을 
     다 변경해야되는 상황이 올 수도 있기 때문에 위의 변수를 더 만든다*/
     
@@ -18,7 +18,6 @@
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
-
 }
 
 /* 모든 태그 */
@@ -29,6 +28,7 @@
 
 body{
     font-family: 'Open Sans' sans-serif;
+    margin: 0;
 }
 
 /* 초기화 */
@@ -41,7 +41,6 @@ ul{
     list-style: none;
     /* 왼쪽 padding들어가 있는거 초기화 */
     padding: 0;
-    
 }
 /*
  파란색 링크표기 제거 */
@@ -63,4 +62,56 @@ button{
 /* focus 마우스로 눌렀을 때 */
 button:focus{
     outline:  1px solid var(--color-accent);
+}
+
+
+/* 헤더부분 꾸미기 */
+/* 헤더 부분을 스크롤링 해도 상위에 고정하고 싶다하면 스틱키/ 픽스트 */
+/* 스틱키는 문서의 플로어를 유지한다 / 픽스트는 문서에서 빠져 나온다 */
+
+/* header */
+.header{
+    background-color: rgb(232, 138, 202);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    display: flex;
+    align-items: center;
+    /* flex박스 안에 있는 자식들의 여백 추가 */
+    gap: 8px;
+}
+
+.header__logo__img{
+    width: 36px;
+    height: 36px;
+}
+
+.header__logo__title{
+    font-size: 1.8rem;
+    /* 기본 폰트 사이즈의 1.8배 */
+}
+
+.header__menu{
+    display: flex;
+    gap: 4px;
+}
+
+.header__menu__item{
+    padding: 8px 16px;
+}
+
+.header__menu__item:hover{
+    border-bottom: 1px solid var(--color-accent);
+}
+/* 선택 된 상태 표시를 위해 class에 active추가 */
+.header__menu__item.active{
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
 }
