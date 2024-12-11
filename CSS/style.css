@@ -1,0 +1,54 @@
+/* Global */
+:root{
+    /* Clolors */
+    --color-white: #ffffff;
+    --color-black: #050a13;
+    --color-blue: #03e8f9;
+    --color-orange: #fd6413;
+    --color-gray: #1b1e26;
+
+}
+
+/* 모든 태그 */
+*{
+    box-sizing: border-box;
+    /* 좀더 직관적으로 넓이 높이 명시 / 페딩과 보더까지 합해서 width,height 이 지정될수 있도록 */
+}
+
+body{
+    font-family: 'Open Sans' sans-serif;
+}
+
+/* 초기화 */
+h1,h2,h3,p,ul{
+    margin: 0;
+}
+
+/* 목록 제거 */
+ul{
+    list-style: none;
+    /* 왼쪽 padding들어가 있는거 초기화 */
+    padding: 0;
+    
+}
+/*
+ 파란색 링크표기 제거 */
+a{
+    /* 밑줄 제거 */
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+/* 버튼 리셋 */
+button{
+    /* 벡그라운드 색 사용안함 */
+    background-color: transparent;
+    /* 아웃라인 없애기 */
+    outline: 0;
+    border: 0;
+}
+
+/* focus 마우스로 눌렀을 때 */
+button:focus{
+    outline:  1px solid var(--color-blue);
+}
