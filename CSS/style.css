@@ -1,5 +1,17 @@
 /* Global */
 :root{
+    /* App Colors */
+    /* 주요 색상 */
+    --color-primary: var(--color-black)
+    --color-primary-variant: var(--color-gray);
+    /* 강조 색상 */
+    --color-accent: var(--color-blue)
+    --color-accent-variant: var(--color-orange);
+    /* 텍스트 색상 */
+    --color-text: var(--color-white)
+    /* 밑의 컬러 변수만 사용 했을 때 만약 블루 칼라를 노란색으로 밖우고 싶을때 이름을 
+    다 변경해야되는 상황이 올 수도 있기 때문에 위의 변수를 더 만든다*/
+    
     /* Clolors */
     --color-white: #ffffff;
     --color-black: #050a13;
@@ -36,7 +48,7 @@ ul{
 a{
     /* 밑줄 제거 */
     text-decoration: none;
-    color: var(--color-black);
+    color: var(--color-text);
 }
 
 /* 버튼 리셋 */
@@ -50,5 +62,5 @@ button{
 
 /* focus 마우스로 눌렀을 때 */
 button:focus{
-    outline:  1px solid var(--color-blue);
+    outline:  1px solid var(--color-accent);
 }
