@@ -20,7 +20,7 @@
     --color-gray: #1b1e26;
 
     /* size */
-    --size-max-widht: 1200px;
+    --size-max-width: 1200px;
 }
 
 /* 모든 태그 */
@@ -246,4 +246,45 @@ button:focus{
 .job__period{
     color: var(--color-primary);
     font-size: 0.8rem;
+}
+
+/* skills */
+#skills{
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+}
+
+.skills{
+    display: grid;
+    /* 몇개의 행을 쓸 건지  밑은 2개의 행에 6배 4배 크기로 지정 */
+    grid-template-columns: 6fr 4fr;
+    margin: 2rem 3rem;
+    border-radius: 8px;
+    /* 자식이 현재 배경색을 지정해서 skills박스에서 삐져 나와 있다 이걸 제거하기 */
+    overflow: hidden;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.skills__title{
+    color: var(--color-accent);
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.skills__coding{
+    /* 코딩만 2개의 로우로 사용 하고 싶어  */
+    grid-row: span 2;
+    padding: 1rem;
+    background-color: var(--color-primary);
+}
+
+.skills__tools{
+    padding: 1rem;
+}
+
+.skills__etc{
+    padding: 1rem;
+    background-color: var(--color-primary);
+    /* 조금 다르게 하고 싶다 */
+    filter: brightness(150%);
 }
