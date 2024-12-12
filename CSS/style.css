@@ -69,6 +69,21 @@ button:focus{
 /* 헤더 부분을 스크롤링 해도 상위에 고정하고 싶다하면 스틱키/ 픽스트 */
 /* 스틱키는 문서의 플로어를 유지한다 / 픽스트는 문서에서 빠져 나온다 */
 
+/* Common */
+/* 공통적으로 사용 되는 스타일링 */
+.section{
+    padding:  4rem;
+    text-align: center;
+}
+.title{
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+.description{
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
 /* header */
 .header{
     background-color: rgb(232, 138, 202);
