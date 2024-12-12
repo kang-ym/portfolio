@@ -18,6 +18,9 @@
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
+
+    /* size */
+    --size-max-widht: 1200px;
 }
 
 /* 모든 태그 */
@@ -82,6 +85,11 @@ button:focus{
 .description{
     margin: 0.5rem 0;
     font-size: 1.5rem;
+}
+/* 브라우저가 넓어지는데 계속 답 없이 넓어져서 제안두기 */
+.max-container{
+    max-width: var(--size-max-width);
+    margin: auto;
 }
 
 /* header */
@@ -178,4 +186,64 @@ button:focus{
     background-color: transparent;
     outline: 2px solid var(--color-accent);
     color: var(--color-text);
+}
+
+/* About */
+.majors{
+    display: flex;
+    /* 아이템들 사이 간격 주기 */
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2.5rem 0;
+}
+/* major 카드형식으로 만들기 */
+.major{
+    background-color: var(--color-primary-variant);
+    padding: 2rem 1rem;
+    color: var(--color-text);
+    border-radius: 4px;
+    /* 마우스가 텍스트에 올라갔을 때 텍스트 커서 안되게 하기  */
+    cursor: default;
+    /* 그림자 주기 */
+    box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7);
+}
+
+.major__icon{
+    font-size: 4rem;
+    margin: 1rem 0;
+    color: var(--color-accent);
+    /* 애니메이션이 움직임 속도 주기 */
+    transition: all 300ms ease;
+}
+
+.major__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* 카드위에 마우스가 올라갔을 때 아이콘에 에니메이션 주기 */
+.major:hover .major__icon{
+    transform: rotate(-15deg) scale(1.2);
+}
+
+.jobs{
+    /* 왼쪽으로 가게 하기  */
+    text-align: start;
+}
+
+.job{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.job__name{
+    color: var(--color-primary);
+}
+
+.job__period{
+    color: var(--color-primary);
+    font-size: 0.8rem;
 }
