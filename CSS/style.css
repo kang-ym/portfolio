@@ -102,6 +102,8 @@ button:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* 헤더를 가장 높은 곳으로 지정 / 가장 앞면 */
+    z-index: 1;
 }
 
 .header__logo{
@@ -310,4 +312,58 @@ button:focus{
 .bar__value{
     height: 3px;
     background-color: var(--color-accent);
+}
+
+/* work */
+#Work{
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.categories{
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem;
+    gap: 1rem;
+}
+
+.category{
+    position: relative;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    padding: 0.5rem 3rem;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    cursor: pointer;
+    /* 브라우져가 작아질때 텍스트 줄바꿈 안되게 하기 */
+    white-space: nowrap;
+}
+
+.category--seelected{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.category__count{
+    /* 선택 됫을 때만 보이게 하기 위해서  opacity 0으로 하면 안보임 */
+    opacity: 0;
+
+    /* absolute를 사용하면 빠져나와 부모한테 붙음 / 스테틱이 아닌곳으로 가서 body로 감  */
+    /* 그래서 버튼에 position: relative;속성 줘야함 */
+    position: absolute;
+    top: -20px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 100%;
+    background-color: var(--color-accent-variant);
+    color: var(--color-text);
+    transition:  all 250ms ease-in;
+}
+/* 선택했을때 숫자만 뜨게 하기 위해 */
+.category--seelected .category__count,
+.category:hover .category__count{
+    opacity: 1;
+    top: 0;
 }
