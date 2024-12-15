@@ -94,7 +94,7 @@ button:focus{
 
 /* header */
 .header{
-    background-color: rgb(232, 138, 202);
+    background-color: var(--color-black);
     position: fixed;
     top: 0;
     width: 100%;
@@ -116,6 +116,8 @@ button:focus{
 .header__logo__img{
     width: 36px;
     height: 36px;
+    color: var(--color-accent);
+    padding: 0.5rem 0.5rem;
 }
 
 .header__logo__title{
@@ -422,4 +424,39 @@ button:focus{
     width: 50px;
     height: 2px;
     background-color: var(--color-accent);
+}
+
+/* testimonial */
+.testimoniials{
+    margin: 3rem;
+}
+.testimonial{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 사진 위치 번갈아 가면서 변화주기  */
+/* 짝수 선택  */
+.testimonial:nth-child(even) .testimonial__img{
+    order: 1;
+}
+.testimonial__img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.testimonial__bubble{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    padding: 1rem;
+}
+
+.testimonial__bubble__name{
+    color: var(--color-accent);
+    font-weight: bold;
+    filter: brightness(70%);
 }
