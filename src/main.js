@@ -29,10 +29,22 @@ const headerHeight = header.getBoundingClientRect().height; // 높이 측정 요
  */
 document.addEventListener('scroll', () => { // scroll이 발 생 했을 때 function 내가 하고 싶은 일 작성  / 이름없는 함수 function() 은 -> ()=>{} 로 가능 <화살표함수>
     //스크롤되는 Y좌표가 headerHeight보다 크다면 다른 스타일링!
-    console.log(window,scrollY);//문서의 전체적인 Y좌표 확이 방법
+    // console.log(window,scrollY);//문서의 전체적인 Y좌표 확이 방법
     if(window.scrollY > headerHeight) {
         header.classList.add('header--dark'); // 클래스 추가 
     } else {
         header.classList.remove('header--dark'); // y가 작다면 header--dark를 지워줘
     }
+});
+
+/**
+ * <목표> Home세션을  안의 컨텐츠만 투명화  스크롤 시
+ * 1. css 에서 투명화를 위한 함수 opacity 사용 0-1 까지 1이 불투명
+ * 2. home 화면 높이 지정 
+ * 3. 우선 home 자체를 투명화 하면 배경까지 투명화 되므로 안되고 그 안에 요소들을 투명화 시켜야 하는데 하나하나 하긴 귀찮으므로 div로 묶어줌
+ */
+const home = document.querySelector('.home__container');
+const homeHeight = home.offsetheight; //높이 받아오기
+document.addEventListener('scroll', () => {    
+    home.style.opacity = 1 - window.scrollY / homeHeight; // opacity 값 계산 
 });
