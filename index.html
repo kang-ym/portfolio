@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="./CSS/style.css">
 
     <!-- Javascript -->
-    <script src="./src/main.js" defer></script>
+    <script type="module" src="./src/main.js" defer></script> <!--type="module" 은 각 자바스크립트파일을 모듈화해서 독립적으로 사용 시킨다 /-->
+    <script type="module" src="./src/projects.js" defer></script><!-- 이유: 정보가 많아지면 어디서 에러가 날지 모름/ 모듈화 안하면 다른 파일에서도 연결이 됨 예)projects에서 main의 header를 log로 확인해도 확인 됨-->
     <!-- defer 위의 head정보를 다 받지 않아도 사용 가능하다  -->
 </head>
 <body>
